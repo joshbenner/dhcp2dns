@@ -60,7 +60,7 @@ class PowerDnsAdmin(requests.Session):
 class EdgeRouter:
     _lease_re = re.compile(r'^(?P<ip>[.0-9]+) +(?P<mac>[:0-9a-f]{17})'
                            r' +\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2}'
-                           r' +[^ ]+ +(?P<name>[^? ]+)$')
+                           r' +[^ ]+ +(?P<name>[^? ]+) *$')
     _static_re = re.compile(r'^.*static-mapping (?P<name>[^ ]+)'
                             r' ip-address (?P<ip>.*)$')
 
